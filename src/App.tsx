@@ -7,7 +7,8 @@ function App() {
   const [result, setResult] = useState('');
 
   const handleSubmit = async () => {
-    const res = await axios.post('https://rusttest-ui7h.shuttle.app/paraphrase', { text: input });
+    // const res = await axios.post('https://rusttest-ui7h.shuttle.app/paraphrase', { text: input });
+    const res = await axios.post('https://text-paraphraser-hb2k.onrender.com/paraphrase', { text: input });
     setResult(res.data.paraphrased);
   };
 
